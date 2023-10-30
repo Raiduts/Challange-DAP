@@ -25,12 +25,12 @@
             <form action="">
                 <p align="left" style="margin-bottom: 5px;">Username atau Email</p>
                 <div class="input-group" style="border: 1px solid rgba(0, 0, 0, 0.5); border-radius: 10px;">
-                    <input type="text" style="border-radius: 10px; border: 0px;" class="form-control" placeholder="kiyyo@brun.cake.id">
+                    <input type="text" style="border-radius: 10px; border: 0px;" class="form-control" id="UE" placeholder="kiyyo@brun.cake.id">
                 </div>
                 <br>
                 <p align="left" style="margin-bottom: 5px;">Kata Sandi</p>
                 <div class="input-group" style="border: 1px solid rgba(0, 0, 0, 0.5); border-radius: 10px;">
-                    <input type="password" style="border-radius: 10px; border: 0px;" class="form-control" placeholder="rahasisaa :D">
+                    <input type="password" style="border-radius: 10px; border: 0px;" id="pass" class="form-control" placeholder="rahasisaa :D">
                     <span class="input-group-text" style="width: auto; background: white; border: none; border-radius: 10px;"><img src="./Assets/icon_eye_closed.svg" alt=""></span>
                 </div>
                 <br>
@@ -40,10 +40,22 @@
                     </div>
                     <a href="#" style="color: black; width: 100%; text-align: right; text-decoration: none;">Lupa Kata Sandi</a>
                 </div>
-                <button type="button" class="btn btn-success" style="width: 100%; padding: 12px 20px;">Masuk</button>                 
+                <button type="button" class="btn btn-success" style="width: 100%; padding: 12px 20px;" onclick="login()">Masuk</button>                 
             </form>
             <p style="margin-top: 30px; font-size: 16px;">Tidak Punya Akun?<a href="./signUp.html" style="color: #059669; text-decoration: none;"> <b>Daftar</b></a></p>
         </div>
     </div>
 </body>
+<script>
+    function login() {
+        var nama = document.getElementById('UE').value;
+        var pass = document.getElementById('pass').value;
+        if (nama.length !== 0 && pass.length !== 0) {
+            alert('Berhasil Login :D');
+        }
+        else {
+            alert('Di isi dulu kackk :D');
+        }
+    }
+</script>
 </html>
